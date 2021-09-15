@@ -917,8 +917,7 @@ function Kavo.CreateLib(kavName, themeList)
                 end)
 
                 TextBox.FocusLost:Connect(function(EnterPressed)
-                    return
-                    end
+                    	return
                     if not EnterPressed then 
                         if focusing then
                         for i,v in next, infoContainer:GetChildren() do
@@ -926,6 +925,7 @@ function Kavo.CreateLib(kavName, themeList)
                             focusing = false
                         end
                         Utility:TweenObject(blurFrame, {BackgroundTransparency = 1}, 0.2)
+                    end
                     else
                         callback(TextBox.Text)
                         wait(0.18)
