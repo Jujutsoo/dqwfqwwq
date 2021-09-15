@@ -918,6 +918,7 @@ function Kavo.CreateLib(kavName, themeList)
 
                 TextBox.FocusLost:Connect(function(EnterPressed)
                     	return
+			end
                     if not EnterPressed then 
                         if focusing then
                         for i,v in next, infoContainer:GetChildren() do
