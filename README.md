@@ -917,12 +917,7 @@ function Kavo.CreateLib(kavName, themeList)
                 end)
 
                 TextBox.FocusLost:Connect(function(EnterPressed)
-                    if focusing then
-                        for i,v in next, infoContainer:GetChildren() do
-                            Utility:TweenObject(v, {Position = UDim2.new(0,0,2,0)}, 0.2)
-                            focusing = false
-                        end
-                        Utility:TweenObject(blurFrame, {BackgroundTransparency = 1}, 0.2)
+                    return
                     end
                     if not EnterPressed then 
                         if focusing then
